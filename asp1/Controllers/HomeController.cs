@@ -10,34 +10,24 @@ namespace asp1.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        // Retorno com ViewResult (após 8:40 do vídeo)
+        public ViewResult Index()
         {
-            return View();
+            return View("minhaView");
         }
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
 
-            return View();
+        /*  Retorno com strings (até 8:40 do vídeo)
+         
+        public string Index()
+        {
+            return "Olá Mundo!";
         }
 
-        public IActionResult Contact()
+        public string Outro()
         {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            return "Outro método!";
         }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        */
     }
 }
