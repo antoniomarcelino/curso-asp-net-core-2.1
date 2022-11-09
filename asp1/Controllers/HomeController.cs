@@ -10,24 +10,13 @@ namespace asp1.Controllers
 {
     public class HomeController : Controller
     {
-        // Retorno com ViewResult (após 8:40 do vídeo)
         public ViewResult Index()
         {
-            return View("minhaView");
+            ViewBag.Nome = "Joao";
+            ViewBag.Apelido = "Ribeiro";
+            ViewBag.Idade = 45;
+            return View("Index");
         }
 
-
-        /*  Retorno com strings (até 8:40 do vídeo)
-         
-        public string Index()
-        {
-            return "Olá Mundo!";
-        }
-
-        public string Outro()
-        {
-            return "Outro método!";
-        }
-        */
     }
 }
